@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Menú</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="bi bi-list text-danger h1"></i>
+        </label>
+        <a href="index.html" class="enlace">
+            <img src="img/PSYchedelic.png" alt="" class="logo">
+        </a>
+        <ul>
+            <li><a class="active" href="index.html">Menú</a></li>
+            <li><a href="./pages/radio.html">Radio</a></li>
+            <li><a href="./pages/blog.html">Blog</a></li>
+            <li><a href="./pages/tienda.html">Tienda</a></li>
+            <li><a href="./pages/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="imagenes">
+            <div class="imagen">
+                <img src="./img/slide1.jpg" alt="" width="100%">
+                <a href="./pages/radio.html" class="subtitulo">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </a>
+            </div>
+            
+            <div class="imagen">
+                <img src="./img/slide2.jpg" alt="" width="100%">
+                <a href="./pages/tienda.html" class="subtitulo">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </a>
+            </div>
+            
+            <div class="imagen">
+                <img src="./img/slide3.jpg" alt="" width="100%">
+                <a href="./pages/blog.html" class="subtitulo">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </a>
+            </div>
+            
+            <div class="imagen">
+                <img src="./img/slide4.jpg" alt="" width="100%">
+                <a href="./pages/contacto.html" class="subtitulo">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/slide1.jpg" class="d-block w-100" alt="slide1">
+                <div class="carousel-caption d-none d-md-block">
+                  <a href="./pages/radio.html" class="text-warning">
+                    <h2 >Escuchá música en vivo</h2>
+                    <h5>Radio con la mejor música electrónica y psicodélica</h5>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="carousel-item">
+                <img src="./img/slide2.jpg" class="d-block w-100" alt="slide2">
+                <div class="carousel-caption d-none d-md-block">
+                  <a href="./pages/tienda.html" class="text-warning">
+                    <h2>Comprá entradas</h2>
+                    <h5>Los mejores eventos de electrónica</h5>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="carousel-item">
+                <img src="./img/slide3.jpg" class="d-block w-100" alt="slide3">
+                <div class="carousel-caption d-none d-md-block">
+                  <a href="./pages/blog.html" class="text-warning">
+                    <h2>Novedades en la comunidad</h2>
+                    <h5>Enterate y conocé todo lo nuevo</h5>
+                  </a>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="./img/slide4.jpg" class="d-block w-100" alt="slide 4">
+                <div class="carousel-caption d-none d-md-block">
+                  <a href="./pages/radio.html" class="text-warning">
+                    <h2>Contactanos</h2>
+                    <h5>Mandanos tu propia música y hacete conocer</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <footer>
+            <div>
+                <i class="bi bi-twitch h3 redes"></i>
+                <i class="bi bi-instagram h3 redes"></i>
+                <i class="bi bi-spotify h3 redes"></i>
+                <i class="bi bi-youtube h3 redes"></i>
+                <i class="bi bi-envelope h3 redes"></i>
+            </div>
+            <div class="copyright">
+                Copyright 2022
+                Belén Forzano
+            </div>
+        </footer>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
