@@ -12,26 +12,29 @@ body {
     overflow-y: visible;
 }
 
+/* NAV */
+
 nav {
-    background: rgb(0, 0, 0);
-    height: 190px;
+    background: $colorfondo;
+    height: 140px;
     width: 100%;
     ul {
         float: right;
         margin-right: 20px;
         @media screen and(max-width:#{$mobile}) {
             position: fixed;
+            z-index: 3;
             width: 100%;
             height: 100vh;
             background: rgb(2, 19, 255);
-            top: 160px;
+            top: 140px;
             left: -100%;
             text-align: center;
             transition: all .5s;
         }
         li {
             display: inline-block;
-            line-height: 190px;
+            line-height: 140px;
             margin: 0 5px;
             @media screen and(max-width:#{$mobile}) {
                 display: block;
@@ -39,16 +42,20 @@ nav {
                 line-height: 30px;
             }
             a {
-                color: rgb(13, 247, 4);
-                font-size: 22px;
+                color: $colorsecundario;
+                font-size: 27px;
                 padding: 7px 13px;
                 border-radius: 3px;
                 text-transform: uppercase;
+                text-decoration: none;
                 @media screen and(max-width:#{$mobile}) {
                     font-size: 40px;
                 }
                 @media screen and(max-width:#{$mobile}) {
                     font-size: 18px;
+                }
+                @media screen and(max-width:#{$tablet}) {
+                    font-size: 20px;
                 }
             }
         }
@@ -56,7 +63,7 @@ nav {
 }
 
 li a.active, li a:hover {
-    background: rgb(141, 41, 16);
+    background: rgba(255, 251, 0, 0.89);
     transition: .5s;
     @media screen and(max-width:#{$mobile}) {
         background: none;
@@ -67,19 +74,22 @@ li a.active, li a:hover {
 .enlace {
     position: absolute;
     padding: 5px 50px;
-    @media screen and(max-width:#{$tablet}) {
-        padding-left: 20px;
-    }
     .logo {
-        height: 180px;
-        line-height: 180px;
-        
+        height: 130px;
+        line-height: 140px;
+    }
+    @media screen and(max-width:#{$tablet}) {
+        .logo {
+            height: 100px;
+            margin-top: 15px;
+        }
+        padding-left: 20px;
     }
 }
 
 .checkbtn {
     float: right;
-    line-height: 190px;
+    line-height: 150px;
     margin-right: 40px;
     cursor: pointer;
     display: none;
@@ -97,8 +107,88 @@ li a.active, li a:hover {
     }
 }
 
-section {
+/* INICIO */
+
+.wrp {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    .portada {
+        width: 100%;
+        height: 100%;
+        background: url(../img/slide4.jpg);
+        background-attachment: fixed;
+    }
+    .contenido {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 217, 255, 0.678);
+        .info {
+            width: 100%;
+            max-width: 750px;
+            text-align: center;
+            h2 {
+                color: rgb(255, 0, 0);
+                font-size: 50px;
+                margin-bottom: 25px;
+                letter-spacing: 1px;
+            }
+            a {
+                display: inline-block;
+                text-decoration: none;
+                font-size: 19px;
+                padding: 10px 25px;
+                color: $colorfondo;
+                background: $colorprincipal;
+                border-radius: 50px;
+                margin-bottom: 40px;
+                border: 2px solid transparent;
+                transition: all 30ms ease;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+    .curveado {
+        position: absolute;
+        width: 100%;
+        bottom: -10px;
+        img {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width:#{$mobile}) {
+        .contenido .info h1 {
+            font-size: 35px;
+        }
+        height: 300px;
+    }
+}
+
+.destacadas-titulo {
+    padding-left: 40px;
+    padding-bottom: 20px;
+    color: $colorprincipal;
+}
+
+.noticias {
+    display: inline-flex;
+    .card {
+        margin-left: 40px;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.secciones {
     background-color: $colorfondo;
+    padding-top: 40px;
     .imagenes {
         display: flex;
         flex-flow: row wrap;
@@ -110,10 +200,33 @@ section {
                 display: flex;
                 justify-content: center;
                 padding: 5px 0;
-                color: rgb(87, 244, 255);
-                font-size: 25px;
+                color: $colorprincipal;
+                font-size: 35px;
+                text-decoration: none;
             }
         }
+    }
+}
+
+.carousel-inner {
+    a {
+        text-decoration: none;
+    }
+}
+
+/* RADIO */
+
+.transmision {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 30px;
+        color: $colorprincipal;
+        padding-top: 25px;
     }
 }
 
@@ -126,6 +239,8 @@ section {
         padding: 40px 30px;
     }
 }
+
+/* FOOTER */
 
 .redes {
     padding: 5px 5px;
